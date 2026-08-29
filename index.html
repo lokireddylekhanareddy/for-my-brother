@@ -1,308 +1,260 @@
+
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>For My Brother ❤️</title>
+```
+<title>For My Brother ❤️</title>
 
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
+```
 
 </head>
 
-
 <body>
 
+```
+<!-- ================= FIRST PAGE ================= -->
 
-    <!-- ================= FIRST PAGE ================= -->
+<section class="page" id="home">
 
-    <section class="page" id="home">
+    <div class="container">
 
-        <div class="container">
+        <h1>Heyyy Brooo ❤️</h1>
 
-            <h1>
-                Heyyy Brooo ❤️
-            </h1>
+        <p class="subtitle">
+            You made a surprise for me...
+            <br>
+            So now it's my turn! 👀🎁
+        </p>
 
-            <p class="subtitle">
+        <button onclick="showNext()">
+            Open My Surprise 🎁
+        </button>
 
-                You made a surprise for me...
+    </div>
 
-                <br>
-
-                So now it's my turn! 👀🎁
-
-            </p>
-
-            <button onclick="showNext()">
-                Open My Surprise 🎁
-            </button>
-
-        </div>
-
-    </section>
+</section>
 
 
+<!-- ================= SECOND PAGE ================= -->
 
-    <!-- ================= SECOND PAGE ================= -->
+<section class="page second-page" id="second">
 
-    <section class="page second-page" id="second">
+    <div class="container">
 
-        <div class="container">
+        <h2>Thank You So Much! 🥹❤️</h2>
 
-            <h2>
-                Thank You So Much! 🥹❤️
-            </h2>
+        <p>
+            I really loved what you made for me.
+        </p>
 
-            <p>
-                I really loved what you made for me.
-            </p>
+        <p>
+            The pictures, the little surprises...
+            everything was sooo special. 🫶
+        </p>
 
-            <p>
-                The pictures, the little surprises...
-                everything was sooo special. 🫶
-            </p>
+        <p>
+            So this little website is for YOU, brooo! 💗
+        </p>
 
-            <p>
-                So this little website is for YOU, brooo! 💗
-            </p>
+        <h3>Made especially for you ❤️</h3>
 
-            <h3>
-                Made especially for you ❤️
-            </h3>
+        <button onclick="showMemories()">
+            There's More... 👀✨
+        </button>
 
-            <button onclick="showMemories()">
-                There's More... 👀✨
-            </button>
+    </div>
 
-        </div>
-
-    </section>
+</section>
 
 
+<!-- ================= MEMORY PAGE ================= -->
 
-    <!-- ================= MEMORY PAGE ================= -->
+<section class="page memories" id="memories">
 
-    <section class="page memories" id="memories">
+    <div class="container">
 
-        <div class="container">
+        <h2>Our Memory 📸❤️</h2>
 
-            <h2>
-                Our Memory 📸❤️
-            </h2>
+        <p>
+            One special moment I'll always remember...
+        </p>
 
-            <p>
-                One special moment I'll always remember...
-            </p>
+        <div class="gallery">
 
+            <div class="photo-card">
 
-            <!-- ONE PHOTO -->
+                <img
+                    src="images/image1.jpg"
+                    alt="Me and my brother"
+                >
 
-            <div class="gallery">
-
-                <div class="photo-card">
-
-                    <img
-                        src="./images/image1.jpg"
-                        alt="Me and my brother"
-                    >
-
-                    <p>
-                        One of my favorite memories
-                        with my brooo ❤️🥹
-                    </p>
-
-                </div>
+                <p>
+                    One of my favorite memories
+                    with my brooo ❤️🥹
+                </p>
 
             </div>
 
-
-            <button onclick="showFinal()">
-                One Last Surprise 🎁
-            </button>
-
         </div>
 
-    </section>
+        <button onclick="showFinal()">
+            One Last Surprise 🎁
+        </button>
+
+    </div>
+
+</section>
 
 
+<!-- ================= FINAL SURPRISE ================= -->
 
-    <!-- ================= FINAL SURPRISE ================= -->
+<section class="page final-page" id="final">
 
-    <section class="page final-page" id="final">
+    <div class="hearts"></div>
 
+    <div class="final-container">
 
-        <!-- FLOATING HEARTS -->
+        <!-- GIFT BOX -->
 
-        <div class="hearts"></div>
-
-
-
-        <div class="final-container">
-
-
-            <!-- GIFT BOX -->
-
-            <div
-                id="giftBox"
-                class="gift-box"
-                onclick="openGift()"
-            >
-
-                <div class="gift-lid">
-                    🎀
-                </div>
-
-                <div class="gift-body">
-                    🎁
-                </div>
-
+        <div
+            id="giftBox"
+            class="gift-box"
+            onclick="openGift()"
+        >
+            <div class="gift-lid">
+                🎀
             </div>
 
+            <div class="gift-body">
+                🎁
+            </div>
+        </div>
 
+
+        <h1>One Last Surprise 🎁</h1>
+
+        <p class="final-intro">
+            I made something special
+            for you...
+        </p>
+
+        <button
+            id="openGiftBtn"
+            onclick="openGift()"
+        >
+            Open My Gift 🎁
+        </button>
+
+
+        <!-- ================= SECRET MESSAGE ================= -->
+
+        <div
+            id="secretMessage"
+            class="secret-message"
+        >
+
+            <div class="surprise-title">
+                🎉 ❤️ 🎉
+            </div>
 
             <h1>
-                One Last Surprise 🎁
+                Surpriseeee Brooo! 🥹❤️
             </h1>
 
-
-            <p class="final-intro">
-
-                I made something special
-                for you...
-
+            <p>
+                You mean more to me
+                than you know. ❤️
             </p>
 
+            <p>
+                Thank you for always being there,
+                for annoying me 😂,
+                making me laugh,
+                and making so many memories
+                with me. 🫶
+            </p>
+
+            <p>
+                No matter how much we fight
+                or annoy each other,
+                you'll always be my special brooo. ❤️
+            </p>
+
+            <h2>
+                Love you brooo! ❤️🥹
+            </h2>
+
+            <p class="signature">
+                — Your annoying sibling 💗
+            </p>
+
+
+            <!-- READ MORE BUTTON -->
 
             <button
-                id="openGiftBtn"
-                onclick="openGift()"
+                id="readMoreBtn"
+                onclick="readMore()"
             >
-                Open My Gift 🎁
+                Read One More Thing 💌
             </button>
 
 
-
-            <!-- ================= SECRET MESSAGE ================= -->
+            <!-- SECOND MESSAGE -->
 
             <div
-                id="secretMessage"
-                class="secret-message"
+                id="moreMessage"
+                class="more-message"
             >
 
-                <div class="surprise-title">
-                    🎉 ❤️ 🎉
-                </div>
-
-
-                <h1>
-                    Surpriseeee Brooo! 🥹❤️
-                </h1>
-
-
-                <p>
-                    You mean more to me
-                    than you know. ❤️
-                </p>
-
-
-                <p>
-                    Thank you for always being there,
-                    for annoying me 😂,
-                    making me laugh,
-                    and making so many memories
-                    with me. 🫶
-                </p>
-
-
-                <p>
-                    No matter how much we fight
-                    or annoy each other,
-                    you'll always be my special brooo. ❤️
-                </p>
-
-
                 <h2>
-                    Love you brooo! ❤️🥹
+                    Just One Thing... 🥹❤️
                 </h2>
 
-
-                <p class="signature">
-                    — Your annoying sibling 💗
+                <p>
+                    Whatever happens,
+                    always remember that
+                    you have a sibling who
+                    will always be proud of you. 🫶
                 </p>
 
+                <p>
+                    Thank you for being my brother,
+                    my partner in crime,
+                    and sometimes my biggest headache 😂❤️
+                </p>
 
+                <p>
+                    I'll always treasure
+                    our memories. 💗
+                </p>
 
-                <!-- READ MORE BUTTON -->
+                <h2>
+                    You're stuck with me forever! 😂❤️
+                </h2>
 
-                <button
-                    id="readMoreBtn"
-                    onclick="readMore()"
-                >
-                    Read One More Thing 💌
-                </button>
-
-
-
-                <!-- SECOND MESSAGE -->
-
-                <div
-                    id="moreMessage"
-                    class="more-message"
-                >
-
-                    <h2>
-                        Just One Thing... 🥹❤️
-                    </h2>
-
-
-                    <p>
-                        Whatever happens,
-                        always remember that
-                        you have a sibling who
-                        will always be proud of you. 🫶
-                    </p>
-
-
-                    <p>
-                        Thank you for being my brother,
-                        my partner in crime,
-                        and sometimes my biggest headache 😂❤️
-                    </p>
-
-
-                    <p>
-                        I'll always treasure
-                        our memories. 💗
-                    </p>
-
-
-                    <h2>
-                        You're stuck with me forever! 😂❤️
-                    </h2>
-
-
-                    <p class="signature">
-                        Always your annoying sibling 💗
-                    </p>
-
-                </div>
+                <p class="signature">
+                    Always your annoying sibling 💗
+                </p>
 
             </div>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
+<!-- ================= JAVASCRIPT ================= -->
 
-    <!-- ================= JAVASCRIPT ================= -->
-
-    <script src="script.js"></script>
-
+<script src="script.js"></script>
+```
 
 </body>
 
