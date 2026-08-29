@@ -1,0 +1,734 @@
+/* ================= BASIC RESET ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #333;
+    overflow-x: hidden;
+
+    /* SOFT ANIMATED BACKGROUND */
+    background: linear-gradient(
+        -45deg,
+        #ffd6e0,
+        #ffe8ee,
+        #fbd5ff,
+        #fff0f5
+    );
+
+    background-size: 400% 400%;
+
+    animation: backgroundMove 12s ease infinite;
+}
+
+
+/* ================= PAGE ================= */
+
+.page {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 25px;
+
+    position: relative;
+}
+
+
+/* ================= MAIN CONTAINER ================= */
+
+.container {
+    width: 90%;
+    max-width: 850px;
+
+    padding: 55px 35px;
+
+    background: rgba(255, 255, 255, 0.82);
+
+    backdrop-filter: blur(10px);
+
+    border-radius: 30px;
+
+    text-align: center;
+
+    box-shadow:
+        0 20px 50px rgba(180, 50, 100, 0.18);
+
+    animation: containerAppear 0.8s ease;
+}
+
+
+/* ================= HEADINGS ================= */
+
+h1 {
+    font-size: 55px;
+    color: #d62968;
+
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 35px;
+    color: #d62968;
+
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 22px;
+
+    margin-top: 25px;
+
+    color: #b92359;
+}
+
+
+/* ================= TEXT ================= */
+
+.subtitle {
+    font-size: 22px;
+    line-height: 1.7;
+}
+
+.container > p {
+    font-size: 20px;
+    line-height: 1.7;
+
+    margin: 15px 0;
+}
+
+
+/* ================================================= */
+/*                     BUTTONS                       */
+/* ================================================= */
+
+button {
+    margin-top: 25px;
+
+    padding: 15px 32px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    background: linear-gradient(
+        135deg,
+        #ff4f91,
+        #d62968
+    );
+
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 10px rgba(214, 41, 104, 0.4),
+        0 8px 20px rgba(214, 41, 104, 0.25);
+
+    transition: 0.3s ease;
+}
+
+
+/* GLOWING BUTTON */
+
+button:hover {
+    transform: translateY(-3px) scale(1.05);
+
+    box-shadow:
+        0 0 15px rgba(255, 79, 145, 0.8),
+        0 0 30px rgba(214, 41, 104, 0.5);
+}
+
+button:active {
+    transform: scale(0.96);
+}
+
+
+/* ================= HIDDEN PAGES ================= */
+
+.second-page {
+    display: none;
+}
+
+.memories {
+    display: none;
+}
+
+.final-page {
+    display: none;
+}
+
+
+/* ================================================= */
+/*                 POLAROID PHOTO                    */
+/* ================================================= */
+
+.gallery {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    margin: 30px 0;
+}
+
+
+/* POLAROID CARD */
+
+.photo-card {
+    width: 430px;
+
+    background: white;
+
+    padding: 12px 12px 25px;
+
+    border-radius: 5px;
+
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, 0.2);
+
+    transform: rotate(-2deg);
+
+    transition: 0.4s ease;
+}
+
+
+/* POLAROID HOVER */
+
+.photo-card:hover {
+    transform:
+        rotate(0deg)
+        scale(1.03)
+        translateY(-5px);
+}
+
+
+/* PHOTO */
+
+.photo-card img {
+    width: 100%;
+
+    height: 300px;
+
+    object-fit: cover;
+
+    display: block;
+
+    border-radius: 2px;
+}
+
+
+/* PHOTO CAPTION */
+
+.photo-card p {
+    color: #555;
+
+    font-family: "Segoe Print", cursive;
+
+    font-size: 17px !important;
+
+    margin: 15px 5px 0 !important;
+
+    line-height: 1.4 !important;
+}
+
+
+/* ================================================= */
+/*                  FINAL SURPRISE                   */
+/* ================================================= */
+
+.final-container {
+    width: 90%;
+
+    max-width: 850px;
+
+    padding: 50px 30px;
+
+    background: rgba(255, 255, 255, 0.88);
+
+    backdrop-filter: blur(12px);
+
+    border-radius: 30px;
+
+    text-align: center;
+
+    box-shadow:
+        0 20px 50px rgba(180, 50, 100, 0.2);
+
+    position: relative;
+
+    z-index: 5;
+
+    animation: containerAppear 0.8s ease;
+}
+
+
+/* ================================================= */
+/*                    GIFT BOX                       */
+/* ================================================= */
+
+.gift-box {
+    width: 180px;
+    height: 170px;
+
+    margin: 0 auto 20px;
+
+    cursor: pointer;
+
+    position: relative;
+
+    transition: 0.5s ease;
+}
+
+
+/* GIFT */
+
+.gift-body {
+    font-size: 120px;
+
+    animation: giftFloat 1.5s ease-in-out infinite;
+
+    filter:
+        drop-shadow(0 10px 10px rgba(0, 0, 0, 0.15));
+}
+
+
+/* RIBBON */
+
+.gift-lid {
+    position: absolute;
+
+    top: -5px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    font-size: 50px;
+
+    z-index: 2;
+}
+
+
+/* ================================================= */
+/*              SECRET MESSAGE                      */
+/* ================================================= */
+
+.secret-message {
+    display: none;
+
+    margin-top: 30px;
+
+    padding: 30px;
+
+    background: rgba(255, 240, 246, 0.95);
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.12);
+
+    animation: messageReveal 1s ease;
+}
+
+
+.secret-message h1 {
+    font-size: 40px;
+}
+
+.secret-message h2 {
+    margin-top: 25px;
+}
+
+.secret-message p {
+    font-size: 19px;
+
+    line-height: 1.7;
+
+    margin: 15px 0;
+}
+
+
+/* ================= SURPRISE TITLE ================= */
+
+.surprise-title {
+    font-size: 35px;
+
+    margin-bottom: 10px;
+
+    animation: sparkle 1.2s infinite alternate;
+}
+
+
+/* ================= SIGNATURE ================= */
+
+.signature {
+    margin-top: 25px !important;
+
+    color: #d62968;
+
+    font-style: italic;
+
+    font-size: 18px !important;
+}
+
+
+/* ================================================= */
+/*                MORE MESSAGE                      */
+/* ================================================= */
+
+.more-message {
+    display: none;
+
+    margin-top: 25px;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    background: #fff0f5;
+
+    animation: messageReveal 0.8s ease;
+}
+
+
+.more-message h2 {
+    font-size: 28px;
+}
+
+
+.more-message p {
+    font-size: 18px;
+
+    line-height: 1.6;
+
+    margin: 12px 0;
+}
+
+
+/* ================================================= */
+/*                FLOATING HEARTS                    */
+/* ================================================= */
+
+.hearts {
+    position: fixed;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 2;
+}
+
+
+.hearts::before {
+    content:
+        "❤️ 💗 💕 💖 ❤️ 💕 💗 💖 ❤️ 💕";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -50px;
+
+    width: 100%;
+
+    font-size: 25px;
+
+    word-spacing: 35px;
+
+    animation:
+        floatHearts 8s linear infinite;
+}
+
+
+/* ================================================= */
+/*                    ANIMATIONS                     */
+/* ================================================= */
+
+
+/* BACKGROUND */
+
+@keyframes backgroundMove {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/* CONTAINER */
+
+@keyframes containerAppear {
+
+    from {
+        opacity: 0;
+
+        transform: scale(0.92);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: scale(1);
+    }
+}
+
+
+/* GIFT FLOAT */
+
+@keyframes giftFloat {
+
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform:
+            translateY(-15px)
+            rotate(3deg);
+    }
+}
+
+
+/* MESSAGE */
+
+@keyframes messageReveal {
+
+    0% {
+        opacity: 0;
+
+        transform:
+            scale(0.5)
+            translateY(30px);
+    }
+
+    70% {
+        transform:
+            scale(1.05)
+            translateY(-5px);
+    }
+
+    100% {
+        opacity: 1;
+
+        transform:
+            scale(1)
+            translateY(0);
+    }
+}
+
+
+/* SPARKLE */
+
+@keyframes sparkle {
+
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.08);
+    }
+}
+
+
+/* HEARTS */
+
+@keyframes floatHearts {
+
+    0% {
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    100% {
+        transform:
+            translateY(-110vh)
+            rotate(20deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* ================================================= */
+/*                    MOBILE                         */
+/* ================================================= */
+
+@media (max-width: 600px) {
+
+    .page {
+        padding: 15px;
+    }
+
+
+    .container {
+        width: 100%;
+
+        padding: 40px 20px;
+
+        border-radius: 25px;
+    }
+
+
+    h1 {
+        font-size: 38px;
+    }
+
+
+    h2 {
+        font-size: 27px;
+    }
+
+
+    h3 {
+        font-size: 19px;
+    }
+
+
+    .subtitle {
+        font-size: 18px;
+    }
+
+
+    .container > p {
+        font-size: 17px;
+    }
+
+
+    button {
+        padding: 13px 23px;
+
+        font-size: 16px;
+    }
+
+
+    /* POLAROID ON PHONE */
+
+    .photo-card {
+        width: 100%;
+
+        max-width: 330px;
+
+        padding: 9px 9px 20px;
+    }
+
+
+    .photo-card img {
+        height: 240px;
+    }
+
+
+    .photo-card p {
+        font-size: 15px !important;
+    }
+
+
+    /* FINAL PAGE */
+
+    .final-container {
+        width: 100%;
+
+        padding: 35px 18px;
+
+        border-radius: 25px;
+    }
+
+
+    .gift-box {
+        width: 150px;
+
+        height: 145px;
+    }
+
+
+    .gift-body {
+        font-size: 95px;
+    }
+
+
+    .gift-lid {
+        font-size: 40px;
+    }
+
+
+    .secret-message {
+        padding: 20px;
+    }
+
+
+    .secret-message h1 {
+        font-size: 28px;
+    }
+
+
+    .secret-message h2 {
+        font-size: 24px;
+    }
+
+
+    .secret-message p {
+        font-size: 16px;
+
+        line-height: 1.6;
+    }
+
+
+    .more-message {
+        padding: 18px;
+    }
+
+
+    .more-message h2 {
+        font-size: 23px;
+    }
+
+
+    .more-message p {
+        font-size: 16px;
+    }
+
+
+    .hearts::before {
+        font-size: 20px;
+
+        word-spacing: 15px;
+    }
+
+}
