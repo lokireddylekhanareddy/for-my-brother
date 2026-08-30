@@ -1,34 +1,34 @@
-// ================= FIRST PAGE =================
+// ================= PAGE 1 =================
 
-function showNext() {
+function showSorry() {
 
     document.getElementById("home").style.display = "none";
 
-    document.getElementById("second").style.display = "flex";
+    document.getElementById("sorry").style.display = "flex";
 
     window.scrollTo(0, 0);
 }
 
 
 
-// ================= MEMORY PAGE =================
+// ================= PAGE 2 =================
 
-function showMemories() {
+function showMessage() {
 
-    document.getElementById("second").style.display = "none";
+    document.getElementById("sorry").style.display = "none";
 
-    document.getElementById("memories").style.display = "flex";
+    document.getElementById("message").style.display = "flex";
 
     window.scrollTo(0, 0);
 }
 
 
 
-// ================= FINAL PAGE =================
+// ================= PAGE 3 =================
 
 function showFinal() {
 
-    document.getElementById("memories").style.display = "none";
+    document.getElementById("message").style.display = "none";
 
     document.getElementById("final").style.display = "flex";
 
@@ -41,17 +41,14 @@ function showFinal() {
 
 function openGift() {
 
-    const gift =
-        document.getElementById("giftBox");
+    const gift = document.getElementById("gift");
 
-    const button =
-        document.getElementById("openGiftBtn");
+    const button = document.getElementById("giftButton");
 
-    const message =
-        document.getElementById("secretMessage");
+    const message = document.getElementById("finalMessage");
 
 
-    // Stop if gift was already opened
+    // Prevent opening twice
 
     if (gift.dataset.opened === "true") {
         return;
@@ -60,69 +57,39 @@ function openGift() {
     gift.dataset.opened = "true";
 
 
-    // Gift shakes first
+    // Gift animation
 
-    gift.style.animation =
-        "giftShake 0.6s ease";
-
-
-    // Wait for shake
+    gift.style.transform =
+        "scale(1.3) rotate(10deg)";
 
     setTimeout(function () {
 
-        // Gift disappears
-
         gift.style.transform =
-            "scale(0) rotate(20deg)";
+            "scale(0) rotate(25deg)";
 
         gift.style.opacity = "0";
 
-
-        // Hide button
-
-        button.style.display = "none";
-
-
-        // Show secret message
-
-        setTimeout(function () {
-
-            message.style.display = "block";
-
-            createSparkles();
-
-        }, 300);
-
-    }, 600);
-
-}
-
-
-
-// ================= READ MORE =================
-
-function readMore() {
-
-    const moreMessage =
-        document.getElementById("moreMessage");
-
-    const readMoreBtn =
-        document.getElementById("readMoreBtn");
-
-
-    // Show second message
-
-    moreMessage.style.display = "block";
+    }, 500);
 
 
     // Hide button
 
-    readMoreBtn.style.display = "none";
+    setTimeout(function () {
+
+        button.style.display = "none";
+
+    }, 400);
 
 
-    // Sparkles again
+    // Show final message
 
-    createSparkles();
+    setTimeout(function () {
+
+        message.style.display = "block";
+
+        createSparkles();
+
+    }, 800);
 
 }
 
@@ -132,13 +99,12 @@ function readMore() {
 
 function createSparkles() {
 
-    for (let i = 0; i < 18; i++) {
+    for (let i = 0; i < 25; i++) {
 
         const sparkle =
             document.createElement("span");
 
         sparkle.innerHTML = "✨";
-
 
         sparkle.style.position = "fixed";
 
@@ -149,13 +115,11 @@ function createSparkles() {
             Math.random() * 100 + "%";
 
         sparkle.style.fontSize =
-            (15 + Math.random() * 20) + "px";
-
-        sparkle.style.pointerEvents =
-            "none";
+            (15 + Math.random() * 25) + "px";
 
         sparkle.style.zIndex = "100";
 
+        sparkle.style.pointerEvents = "none";
 
         sparkle.style.animation =
             "sparkleFall 1.5s ease forwards";

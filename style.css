@@ -1,4 +1,4 @@
-/* ================= BASIC RESET ================= */
+/* ================= BASIC ================= */
 
 * {
     margin: 0;
@@ -6,151 +6,117 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
-    font-family: "Segoe UI", Arial, sans-serif;
-    color: #333;
+    font-family: "Segoe UI", sans-serif;
     overflow-x: hidden;
-
-    /* SOFT ANIMATED BACKGROUND */
-    background: linear-gradient(
-        -45deg,
-        #ffd6e0,
-        #ffe8ee,
-        #fbd5ff,
-        #fff0f5
-    );
-
-    background-size: 400% 400%;
-
-    animation: backgroundMove 12s ease infinite;
+    color: #4a2030;
 }
 
 
-/* ================= PAGE ================= */
+/* ================= PAGES ================= */
 
 .page {
     min-height: 100vh;
-
-    display: flex;
-    justify-content: center;
+    width: 100%;
+    display: none;
     align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px 20px;
 
-    padding: 25px;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,0.8), transparent 30%),
+        radial-gradient(circle at 80% 80%, rgba(255,180,210,0.5), transparent 30%),
+        linear-gradient(135deg, #ffe4ec, #fff5f8, #ffd9e5);
 
-    position: relative;
+    animation: pageAppear 0.8s ease;
+}
+
+#home {
+    display: flex;
 }
 
 
-/* ================= MAIN CONTAINER ================= */
+/* ================= CONTAINER ================= */
 
 .container {
-    width: 90%;
-    max-width: 850px;
+    width: 100%;
+    max-width: 650px;
+    padding: 40px 30px;
 
-    padding: 55px 35px;
-
-    background: rgba(255, 255, 255, 0.82);
-
-    backdrop-filter: blur(10px);
-
+    background: rgba(255,255,255,0.55);
     border-radius: 30px;
 
-    text-align: center;
-
     box-shadow:
-        0 20px 50px rgba(180, 50, 100, 0.18);
+        0 20px 50px rgba(150, 60, 90, 0.15);
 
-    animation: containerAppear 0.8s ease;
-}
-
-
-/* ================= HEADINGS ================= */
-
-h1 {
-    font-size: 55px;
-    color: #d62968;
-
-    margin-bottom: 20px;
-}
-
-h2 {
-    font-size: 35px;
-    color: #d62968;
-
-    margin-bottom: 20px;
-}
-
-h3 {
-    font-size: 22px;
-
-    margin-top: 25px;
-
-    color: #b92359;
+    backdrop-filter: blur(10px);
 }
 
 
 /* ================= TEXT ================= */
 
-.subtitle {
-    font-size: 22px;
-    line-height: 1.7;
+.emoji {
+    font-size: 70px;
+    margin-bottom: 15px;
+
+    animation: floatEmoji 2.5s ease-in-out infinite;
 }
 
-.container > p {
-    font-size: 20px;
-    line-height: 1.7;
+h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
 
+h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.7;
     margin: 15px 0;
 }
 
+.small-text {
+    font-size: 14px;
+    opacity: 0.7;
+}
 
-/* ================================================= */
-/*                     BUTTONS                       */
-/* ================================================= */
+
+/* ================= BUTTON ================= */
 
 button {
-    margin-top: 25px;
-
-    padding: 15px 32px;
-
     border: none;
+    outline: none;
+
+    padding: 15px 28px;
+
+    margin-top: 20px;
 
     border-radius: 50px;
 
-    background: linear-gradient(
-        135deg,
-        #ff4f91,
-        #d62968
-    );
+    background: linear-gradient(135deg, #ff5f91, #ff8fb3);
 
     color: white;
 
-    font-size: 18px;
-
-    font-weight: 600;
+    font-size: 17px;
+    font-weight: bold;
 
     cursor: pointer;
 
     box-shadow:
-        0 0 10px rgba(214, 41, 104, 0.4),
-        0 8px 20px rgba(214, 41, 104, 0.25);
+        0 8px 25px rgba(255, 70, 130, 0.35);
 
     transition: 0.3s ease;
 }
 
-
-/* GLOWING BUTTON */
-
 button:hover {
-    transform: translateY(-3px) scale(1.05);
+    transform: translateY(-4px) scale(1.04);
 
     box-shadow:
-        0 0 15px rgba(255, 79, 145, 0.8),
-        0 0 30px rgba(214, 41, 104, 0.5);
+        0 12px 35px rgba(255, 70, 130, 0.5);
 }
 
 button:active {
@@ -158,352 +124,138 @@ button:active {
 }
 
 
-/* ================= HIDDEN PAGES ================= */
+/* ================= FINAL PAGE ================= */
 
-.second-page {
-    display: none;
+#final {
+    position: relative;
+    overflow: hidden;
 }
-
-.memories {
-    display: none;
-}
-
-.final-page {
-    display: none;
-}
-
-
-/* ================================================= */
-/*                 POLAROID PHOTO                    */
-/* ================================================= */
-
-.gallery {
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
-
-    margin: 30px 0;
-}
-
-
-/* POLAROID CARD */
-
-.photo-card {
-    width: 430px;
-
-    background: white;
-
-    padding: 12px 12px 25px;
-
-    border-radius: 5px;
-
-    box-shadow:
-        0 15px 30px rgba(0, 0, 0, 0.2);
-
-    transform: rotate(-2deg);
-
-    transition: 0.4s ease;
-}
-
-
-/* POLAROID HOVER */
-
-.photo-card:hover {
-    transform:
-        rotate(0deg)
-        scale(1.03)
-        translateY(-5px);
-}
-
-
-/* PHOTO */
-
-.photo-card img {
-    width: 100%;
-
-    height: 300px;
-
-    object-fit: cover;
-
-    display: block;
-
-    border-radius: 2px;
-}
-
-
-/* PHOTO CAPTION */
-
-.photo-card p {
-    color: #555;
-
-    font-family: "Segoe Print", cursive;
-
-    font-size: 17px !important;
-
-    margin: 15px 5px 0 !important;
-
-    line-height: 1.4 !important;
-}
-
-
-/* ================================================= */
-/*                  FINAL SURPRISE                   */
-/* ================================================= */
 
 .final-container {
-    width: 90%;
-
-    max-width: 850px;
-
-    padding: 50px 30px;
-
-    background: rgba(255, 255, 255, 0.88);
-
-    backdrop-filter: blur(12px);
-
-    border-radius: 30px;
-
-    text-align: center;
-
-    box-shadow:
-        0 20px 50px rgba(180, 50, 100, 0.2);
-
     position: relative;
-
     z-index: 5;
-
-    animation: containerAppear 0.8s ease;
 }
 
 
-/* ================================================= */
-/*                    GIFT BOX                       */
-/* ================================================= */
+/* ================= GIFT ================= */
 
-.gift-box {
-    width: 180px;
-    height: 170px;
-
-    margin: 0 auto 20px;
+.gift {
+    font-size: 100px;
 
     cursor: pointer;
 
-    position: relative;
+    margin: 10px auto 20px;
+
+    display: inline-block;
+
+    animation:
+        giftFloat 2s ease-in-out infinite;
 
     transition: 0.5s ease;
 }
 
-
-/* GIFT */
-
-.gift-body {
-    font-size: 120px;
-
-    animation: giftFloat 1.5s ease-in-out infinite;
-
-    filter:
-        drop-shadow(0 10px 10px rgba(0, 0, 0, 0.15));
+.gift:hover {
+    transform: scale(1.12) rotate(-5deg);
 }
 
 
-/* RIBBON */
+/* ================= SECRET MESSAGE ================= */
 
-.gift-lid {
-    position: absolute;
-
-    top: -5px;
-
-    left: 50%;
-
-    transform: translateX(-50%);
-
-    font-size: 50px;
-
-    z-index: 2;
-}
-
-
-/* ================================================= */
-/*              SECRET MESSAGE                      */
-/* ================================================= */
-
-.secret-message {
+.final-message {
     display: none;
 
     margin-top: 30px;
 
-    padding: 30px;
-
-    background: rgba(255, 240, 246, 0.95);
+    padding: 30px 25px;
 
     border-radius: 25px;
 
+    background: rgba(255,255,255,0.8);
+
     box-shadow:
-        0 10px 30px rgba(0, 0, 0, 0.12);
+        0 15px 40px rgba(180, 60, 100, 0.2);
 
-    animation: messageReveal 1s ease;
+    animation: messageAppear 1s ease;
 }
 
-
-.secret-message h1 {
-    font-size: 40px;
+.final-message h1 {
+    font-size: 32px;
 }
 
-.secret-message h2 {
+.final-message h2 {
     margin-top: 25px;
 }
 
-.secret-message p {
-    font-size: 19px;
-
-    line-height: 1.7;
-
-    margin: 15px 0;
+.ending {
+    font-weight: bold;
 }
-
-
-/* ================= SURPRISE TITLE ================= */
-
-.surprise-title {
-    font-size: 35px;
-
-    margin-bottom: 10px;
-
-    animation: sparkle 1.2s infinite alternate;
-}
-
-
-/* ================= SIGNATURE ================= */
 
 .signature {
-    margin-top: 25px !important;
-
-    color: #d62968;
-
     font-style: italic;
-
-    font-size: 18px !important;
+    opacity: 0.75;
 }
 
 
-/* ================================================= */
-/*                MORE MESSAGE                      */
-/* ================================================= */
+/* ================= SPARKLES ================= */
 
-.more-message {
-    display: none;
+.sparkles {
+    font-size: 35px;
 
-    margin-top: 25px;
-
-    padding: 25px;
-
-    border-radius: 20px;
-
-    background: #fff0f5;
-
-    animation: messageReveal 0.8s ease;
+    animation:
+        sparkle 1.5s ease-in-out infinite;
 }
 
 
-.more-message h2 {
-    font-size: 28px;
-}
-
-
-.more-message p {
-    font-size: 18px;
-
-    line-height: 1.6;
-
-    margin: 12px 0;
-}
-
-
-/* ================================================= */
-/*                FLOATING HEARTS                    */
-/* ================================================= */
+/* ================= FLOATING HEARTS ================= */
 
 .hearts {
-    position: fixed;
-
-    left: 0;
-    top: 0;
+    position: absolute;
 
     width: 100%;
     height: 100%;
 
-    pointer-events: none;
-
-    overflow: hidden;
-
-    z-index: 2;
-}
-
-
-.hearts::before {
-    content:
-        "❤️ 💗 💕 💖 ❤️ 💕 💗 💖 ❤️ 💕";
-
-    position: absolute;
-
+    top: 0;
     left: 0;
 
-    bottom: -50px;
+    pointer-events: none;
 
-    width: 100%;
+    font-size: 30px;
 
-    font-size: 25px;
+    letter-spacing: 25px;
 
-    word-spacing: 35px;
+    opacity: 0.7;
 
-    animation:
-        floatHearts 8s linear infinite;
+    animation: heartsFloat 5s ease-in-out infinite;
 }
 
 
-/* ================================================= */
-/*                    ANIMATIONS                     */
-/* ================================================= */
+/* ================= ANIMATIONS ================= */
 
-
-/* BACKGROUND */
-
-@keyframes backgroundMove {
-
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-
-/* CONTAINER */
-
-@keyframes containerAppear {
+@keyframes pageAppear {
 
     from {
         opacity: 0;
-
-        transform: scale(0.92);
+        transform: scale(0.98);
     }
 
     to {
         opacity: 1;
-
         transform: scale(1);
     }
 }
 
 
-/* GIFT FLOAT */
+@keyframes floatEmoji {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
 
 @keyframes giftFloat {
 
@@ -512,223 +264,102 @@ button:active {
     }
 
     50% {
-        transform:
-            translateY(-15px)
-            rotate(3deg);
+        transform: translateY(-15px) rotate(3deg);
     }
 }
 
 
-/* MESSAGE */
-
-@keyframes messageReveal {
+@keyframes messageAppear {
 
     0% {
         opacity: 0;
-
-        transform:
-            scale(0.5)
-            translateY(30px);
-    }
-
-    70% {
-        transform:
-            scale(1.05)
-            translateY(-5px);
+        transform: translateY(40px) scale(0.8);
     }
 
     100% {
         opacity: 1;
-
-        transform:
-            scale(1)
-            translateY(0);
+        transform: translateY(0) scale(1);
     }
 }
 
-
-/* SPARKLE */
 
 @keyframes sparkle {
 
-    from {
+    0%, 100% {
         transform: scale(1);
+        opacity: 0.7;
     }
 
-    to {
-        transform: scale(1.08);
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
     }
 }
 
 
-/* HEARTS */
-
-@keyframes floatHearts {
+@keyframes heartsFloat {
 
     0% {
-        transform:
-            translateY(0)
-            rotate(0deg);
-
-        opacity: 0;
+        transform: translateY(20px);
     }
 
-    20% {
-        opacity: 1;
+    50% {
+        transform: translateY(-20px);
     }
 
     100% {
-        transform:
-            translateY(-110vh)
-            rotate(20deg);
-
-        opacity: 0;
+        transform: translateY(20px);
     }
 }
 
 
-/* ================================================= */
-/*                    MOBILE                         */
-/* ================================================= */
+/* ================= MOBILE ================= */
 
 @media (max-width: 600px) {
 
     .page {
-        padding: 15px;
+        padding: 20px 12px;
     }
-
 
     .container {
-        width: 100%;
-
-        padding: 40px 20px;
-
+        padding: 30px 20px;
         border-radius: 25px;
     }
 
+    .emoji {
+        font-size: 55px;
+    }
 
     h1 {
-        font-size: 38px;
+        font-size: 30px;
     }
-
 
     h2 {
-        font-size: 27px;
-    }
-
-
-    h3 {
-        font-size: 19px;
-    }
-
-
-    .subtitle {
-        font-size: 18px;
-    }
-
-
-    .container > p {
-        font-size: 17px;
-    }
-
-
-    button {
-        padding: 13px 23px;
-
-        font-size: 16px;
-    }
-
-
-    /* POLAROID ON PHONE */
-
-    .photo-card {
-        width: 100%;
-
-        max-width: 330px;
-
-        padding: 9px 9px 20px;
-    }
-
-
-    .photo-card img {
-        height: 240px;
-    }
-
-
-    .photo-card p {
-        font-size: 15px !important;
-    }
-
-
-    /* FINAL PAGE */
-
-    .final-container {
-        width: 100%;
-
-        padding: 35px 18px;
-
-        border-radius: 25px;
-    }
-
-
-    .gift-box {
-        width: 150px;
-
-        height: 145px;
-    }
-
-
-    .gift-body {
-        font-size: 95px;
-    }
-
-
-    .gift-lid {
-        font-size: 40px;
-    }
-
-
-    .secret-message {
-        padding: 20px;
-    }
-
-
-    .secret-message h1 {
-        font-size: 28px;
-    }
-
-
-    .secret-message h2 {
         font-size: 24px;
     }
 
-
-    .secret-message p {
+    p {
         font-size: 16px;
-
         line-height: 1.6;
     }
 
-
-    .more-message {
-        padding: 18px;
-    }
-
-
-    .more-message h2 {
-        font-size: 23px;
-    }
-
-
-    .more-message p {
+    button {
+        width: 90%;
+        max-width: 300px;
         font-size: 16px;
+        padding: 14px 20px;
     }
 
+    .gift {
+        font-size: 80px;
+    }
 
-    .hearts::before {
-        font-size: 20px;
+    .final-message {
+        padding: 25px 18px;
+    }
 
-        word-spacing: 15px;
+    .final-message h1 {
+        font-size: 27px;
     }
 
 }

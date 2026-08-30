@@ -1,260 +1,226 @@
-
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-```
-<title>For My Brother ❤️</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="style.css">
-```
+    <title>I'm Sorry Bro 🥺❤️</title>
 
+    <link rel="stylesheet" href="style.css">
 </head>
+
 
 <body>
 
-```
-<!-- ================= FIRST PAGE ================= -->
 
-<section class="page" id="home">
+    <!-- ================= PAGE 1 ================= -->
 
-    <div class="container">
+    <section class="page" id="home">
 
-        <h1>Heyyy Brooo ❤️</h1>
+        <div class="container">
 
-        <p class="subtitle">
-            You made a surprise for me...
-            <br>
-            So now it's my turn! 👀🎁
-        </p>
-
-        <button onclick="showNext()">
-            Open My Surprise 🎁
-        </button>
-
-    </div>
-
-</section>
-
-
-<!-- ================= SECOND PAGE ================= -->
-
-<section class="page second-page" id="second">
-
-    <div class="container">
-
-        <h2>Thank You So Much! 🥹❤️</h2>
-
-        <p>
-            I really loved what you made for me.
-        </p>
-
-        <p>
-            The pictures, the little surprises...
-            everything was sooo special. 🫶
-        </p>
-
-        <p>
-            So this little website is for YOU, brooo! 💗
-        </p>
-
-        <h3>Made especially for you ❤️</h3>
-
-        <button onclick="showMemories()">
-            There's More... 👀✨
-        </button>
-
-    </div>
-
-</section>
-
-
-<!-- ================= MEMORY PAGE ================= -->
-
-<section class="page memories" id="memories">
-
-    <div class="container">
-
-        <h2>Our Memory 📸❤️</h2>
-
-        <p>
-            One special moment I'll always remember...
-        </p>
-
-        <div class="gallery">
-
-            <div class="photo-card">
-
-                <img
-                    src="images/image1.jpg"
-                    alt="Me and my brother"
-                >
-
-                <p>
-                    One of my favorite memories
-                    with my brooo ❤️🥹
-                </p>
-
-            </div>
-
-        </div>
-
-        <button onclick="showFinal()">
-            One Last Surprise 🎁
-        </button>
-
-    </div>
-
-</section>
-
-
-<!-- ================= FINAL SURPRISE ================= -->
-
-<section class="page final-page" id="final">
-
-    <div class="hearts"></div>
-
-    <div class="final-container">
-
-        <!-- GIFT BOX -->
-
-        <div
-            id="giftBox"
-            class="gift-box"
-            onclick="openGift()"
-        >
-            <div class="gift-lid">
-                🎀
-            </div>
-
-            <div class="gift-body">
-                🎁
-            </div>
-        </div>
-
-
-        <h1>One Last Surprise 🎁</h1>
-
-        <p class="final-intro">
-            I made something special
-            for you...
-        </p>
-
-        <button
-            id="openGiftBtn"
-            onclick="openGift()"
-        >
-            Open My Gift 🎁
-        </button>
-
-
-        <!-- ================= SECRET MESSAGE ================= -->
-
-        <div
-            id="secretMessage"
-            class="secret-message"
-        >
-
-            <div class="surprise-title">
-                🎉 ❤️ 🎉
+            <div class="emoji">
+                🥺
             </div>
 
             <h1>
-                Surpriseeee Brooo! 🥹❤️
+                Brooo...
             </h1>
 
             <p>
-                You mean more to me
-                than you know. ❤️
+                I need to tell you something.
+            </p>
+
+            <p class="small-text">
+                Please read this till the end ❤️
+            </p>
+
+            <button onclick="showSorry()">
+                Open This ❤️
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= PAGE 2 ================= -->
+
+    <section class="page" id="sorry">
+
+        <div class="container">
+
+            <div class="emoji">
+                💔
+            </div>
+
+            <h1>
+                I'm Sorry, Brooo 🥺
+            </h1>
+
+            <p>
+                I really didn't mean to hurt you.
             </p>
 
             <p>
-                Thank you for always being there,
-                for annoying me 😂,
-                making me laugh,
-                and making so many memories
-                with me. 🫶
+                If something I said or did made you
+                feel bad, I'm genuinely sorry. ❤️
+            </p>
+
+            <button onclick="showMessage()">
+                Read My Heart 💌
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= PAGE 3 ================= -->
+
+    <section class="page" id="message">
+
+        <div class="container">
+
+            <div class="emoji">
+                🫶
+            </div>
+
+            <h1>
+                Just Listen Once... 🥹
+            </h1>
+
+            <p>
+                Sometimes I may say things without
+                thinking about how they might affect you.
             </p>
 
             <p>
-                No matter how much we fight
-                or annoy each other,
-                you'll always be my special brooo. ❤️
+                But please never think that I don't care
+                about you.
             </p>
 
-            <h2>
-                Love you brooo! ❤️🥹
-            </h2>
-
-            <p class="signature">
-                — Your annoying sibling 💗
+            <p>
+                You are my brother, and you mean
+                much more to me than I usually say. ❤️
             </p>
 
+            <p>
+                I may annoy you, fight with you,
+                and sometimes make mistakes...
+                but I never want to lose the bond we have. 🥺
+            </p>
 
-            <!-- READ MORE BUTTON -->
+            <button onclick="showFinal()">
+                One Last Thing 🎁
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FINAL PAGE ================= -->
+
+    <section class="page" id="final">
+
+        <div class="hearts">
+
+            ❤️ 💗 💕 💖 ❤️ 💕 💗 💖
+
+        </div>
+
+
+        <div class="container final-container">
+
+            <div
+                id="gift"
+                class="gift"
+                onclick="openGift()"
+            >
+                🎁
+            </div>
+
+
+            <h1>
+                One Last Thing... ❤️
+            </h1>
+
+
+            <p>
+                I made this little surprise
+                just to say...
+            </p>
+
 
             <button
-                id="readMoreBtn"
-                onclick="readMore()"
+                id="giftButton"
+                onclick="openGift()"
             >
-                Read One More Thing 💌
+                Open My Heart 💌
             </button>
 
 
-            <!-- SECOND MESSAGE -->
+
+            <!-- SECRET MESSAGE -->
 
             <div
-                id="moreMessage"
-                class="more-message"
+                id="finalMessage"
+                class="final-message"
             >
 
-                <h2>
-                    Just One Thing... 🥹❤️
-                </h2>
+                <div class="sparkles">
+                    ✨ 💖 ✨
+                </div>
+
+                <h1>
+                    I'm Really Sorry, Brooo 🥹❤️
+                </h1>
 
                 <p>
-                    Whatever happens,
-                    always remember that
-                    you have a sibling who
-                    will always be proud of you. 🫶
+                    I hope you know that
+                    I genuinely care about you.
+                </p>
+
+                <p>
+                    Whatever happened,
+                    I never wanted to hurt you.
                 </p>
 
                 <p>
                     Thank you for being my brother,
-                    my partner in crime,
-                    and sometimes my biggest headache 😂❤️
-                </p>
-
-                <p>
-                    I'll always treasure
-                    our memories. 💗
+                    for putting up with my craziness 😂,
+                    and for all the memories we've made.
                 </p>
 
                 <h2>
-                    You're stuck with me forever! 😂❤️
+                    Please forgive me, brooo. ❤️
                 </h2>
 
+                <p class="ending">
+                    No matter what,
+                    you'll always be my brooo. 🫶
+                </p>
+
                 <p class="signature">
-                    Always your annoying sibling 💗
+                    — Your annoying sibling 🥺❤️
                 </p>
 
             </div>
 
         </div>
 
-    </div>
-
-</section>
+    </section>
 
 
-<!-- ================= JAVASCRIPT ================= -->
 
-<script src="script.js"></script>
-```
+    <script src="script.js"></script>
 
 </body>
 
